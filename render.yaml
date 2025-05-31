@@ -1,9 +1,4 @@
-services:
-  - type: worker
-    name: telegram-youtube-bot
-    env: python
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: python nafismahmudmahi_bot.py
-    autoDeploy: true
-    branch: main
+cron:
+  - name: telegram-youtube-bot-cron
+    schedule: "*/5 * * * *"  # every 5 minutes
+    command: "python nafismahmudmahi_bot.py"
