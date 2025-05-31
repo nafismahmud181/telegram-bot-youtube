@@ -1,4 +1,9 @@
-cron:
+cronJobs:
   - name: telegram-youtube-bot-cron
     schedule: "*/5 * * * *"  # every 5 minutes
     command: "python nafismahmudmahi_bot.py"
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: CHAT_ID
+        sync: false
