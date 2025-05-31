@@ -1,0 +1,9 @@
+services:
+  - type: worker
+    name: telegram-youtube-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python nafismahmudmahi_bot.py
+    autoDeploy: true
+    branch: main
